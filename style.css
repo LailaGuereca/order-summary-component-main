@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --neutral-very-pale-blue: hsl(225, 100%, 98%);
+    --neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+    --font-family: 'Red Hat Display', sans-serif;
+}
+
+/*Mobile: 375px
+Desktop: 1440px
+Font size (paragraph): 16px
+Weights: 500, 700, 900*/
+
+/*Screen*/
+@media (min-width: 375px) and (max-width: 768px) {
+    body {
+        background-color: var(--primary-pale-blue);
+        background-image: url(images/pattern-background-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1440px) {
+    body {
+        background-color: var(--primary-pale-blue);
+        background-image: url(images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+/*General*/
+body {
+    font-family: var(--font-family);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*Card*/
+.card {
+    background-color: #fff;
+    width: 450px;
+    border-radius: 25px;
+}
+
+.card .card-image svg {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .card-content h1 {
+    color: var(--neutral-dark-blue);
+    font-weight: 900;
+}
+
+.card .card-content p {
+    text-align: center;
+    margin-top: 0;
+    line-height: 1.5em;
+    color: var(--neutral-desaturated-blue);
+}
